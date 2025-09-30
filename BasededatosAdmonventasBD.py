@@ -70,15 +70,16 @@ class DatabaseConnection:
             '''CREATE TABLE IF NOT EXISTS Clientes (
                 cliente_id INT AUTO_INCREMENT PRIMARY KEY,
                 nombre VARCHAR(100) NOT NULL,
-                telefono VARCHAR(15),
-                direccion VARCHAR(150)
+                correo VARCHAR(100),
+                telefono VARCHAR(15)
             )''',
             '''CREATE TABLE IF NOT EXISTS Productos (
                 producto_id INT AUTO_INCREMENT PRIMARY KEY,
                 nombre VARCHAR(100) NOT NULL,
                 descripcion TEXT,
                 precio DECIMAL(10,2) NOT NULL,
-                stock INT NOT NULL
+                stock INT NOT NULL,
+                imagen VARCHAR(255)
             )''',
             '''CREATE TABLE IF NOT EXISTS Categorias (
                 categoria_id INT AUTO_INCREMENT PRIMARY KEY,
